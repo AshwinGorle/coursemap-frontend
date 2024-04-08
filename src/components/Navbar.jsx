@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { toast } from "react-hot-toast";
+import { CgProfile } from "react-icons/cg";
+
 
 function Navbar(props){
    let isLoggedIn = props.isLoggedIn;
@@ -71,10 +73,16 @@ function Navbar(props){
                     <Link to='/explore-roadmaps'>
                         <button
                            className=" bg-[#2c3842] text-white text-[18px] py-[8px] px-[12px] rounded-[8px] bg-black-700 ">
-                            Explore Roadmaps
+                            Explore Roadmap
                          </button>
                      </Link>
-                }            
+                }     
+                {
+                    <Link to = '/profile'>
+                        <CgProfile  className=" text-gray-500 text-4xl"/>
+                    </Link>
+                    
+                }       
             </div>
 
         </div>

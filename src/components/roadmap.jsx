@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ReactFlow, { Background, Controls } from 'react-flow-renderer';
+import { BASE_URL } from '../../constant';
+
 
 const Roadmap = ({ nodeId }) => {
   const [nodes, setNodes] = useState([]);
@@ -10,7 +12,7 @@ const Roadmap = ({ nodeId }) => {
     if (!nodeId) return;
 
     // Fetch data from the API
-    fetch(http://localhost:5000/nodes/get-node-with-prerequisite/${nodeId}) /// yha local host ki jgha deployed api url dalna baki db same
+    fetch(`${BASE_URL}/nodes/get-node-with-prerequisite/${nodeId}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch data');
@@ -71,7 +73,7 @@ const Roadmap = ({ nodeId }) => {
         nodeList.push(childNode);
 
         // Connect the parent node to the child node
-        edgeList.push({ id: ${node._id}-${prereq._id}, source: node._id, target: prereq._id });
+        edgeList.push({ id: `${node._id}-${prereq._id}`, source: node._id, target: prereq._id });
 
         // Recursive call for child prerequisites
         generateNodeRecursive(prereq, nodeList, edgeList, x + 200, newY, level + 1);

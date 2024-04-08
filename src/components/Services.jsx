@@ -3,9 +3,9 @@ import React from 'react'
 const Services = () => {
   return (
     <div className=''>
-      <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-16">
-    <h2 class="mb-1 text-3xl font-extrabold leading-tight text-gray-200">Services</h2>
-    <p class="mb-12 text-lg text-gray-400">Here is a few of the awesome Services we provide.</p>
+      <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-24">
+    <h2 class="mb-1 text-3xl flex justify-center font-extrabold leading-tight text-gray-200">Services</h2>
+    <p class="mb-12 text-lg flex justify-center text-gray-400">Here is a few of the awesome Services we provide.</p>
     <div class="w-full">
         <div class="flex flex-col w-full mb-10 sm:flex-row">
             <div class="w-full mb-10 sm:mb-0 sm:w-1/2">

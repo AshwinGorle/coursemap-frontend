@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import ReactFlow, { Background, Controls } from 'react-flow-renderer';
+import { BASE_URL } from '../../constant';
 import { useParams } from 'react-router-dom';
 
-const Roadmap = () => {
+const Roadmap = ({nId, height, width, targetId}) => {
   const [nodes, setNodes] = useState([]);
   const [edges, setEdges] = useState([]);
   const [error, setError] = useState(null);
   const { nodeId } = useParams();
-  console.log("this is node Id in param",nodeId )
-
+  console.log("this is node Id in param",nodeId );
+  
+  let fetchNodeId = nId;
+  if(!nId){
+   fetchNodeId = nodeId;
+  }
+  
   useEffect(() => {
     if (!nodeId) return;
 
     // Fetch data from the API
-    fetch(`https://coursemap-backend.vercel.app/nodes/get-node-with-prerequisite/${nodeId}`) /// yha local host ki jgha deployed api url dalna baki db same
+    fetch(`${BASE_URL}/nodes/get-node-with-prerequisite/${fetchNodeId}`) /// yha local host ki jgha deployed api url dalna baki db same
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch data');
@@ -31,7 +37,7 @@ const Roadmap = () => {
       .catch(error => {
         setError(error.message);
       });
-  }, [nodeId]);
+  },[targetId]);
 
   const generateNodesAndEdges = (node, level = 0) => {
     if (!node) return { nodes: [], edges: [] };
@@ -93,7 +99,7 @@ const Roadmap = () => {
   }
 
   return (
-    <div style={{ width: '100%', height: '600px' }}>
+    <div style={{ width: '100%', height: `${height? height : '700px'}` }}>
       <ReactFlow nodes={nodes} edges={edges} style={{ width: '100%', height: '100%' }}>
         <Background />
         <Controls />

@@ -26,7 +26,7 @@ const Footer = () => {
 
   return (
     <div className=' text-white bg-pink-600 '>
-        <marquee>"api_code": "PRAYATNA_dd31bcbefa8548688038597bd343ff48"</marquee>
+        <marquee>Ashwin Gorle , Chirag Patil , Bhishek Parmar , Akshansh Gorle</marquee>
         
     </div>
   )

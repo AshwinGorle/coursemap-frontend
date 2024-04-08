@@ -6,14 +6,13 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import { useState } from 'react';
 import PrivateRoute from './components/PrivateRoute';
-import AllCourses from './pages/AllCourses';
-import NewDiv from './components/NewDiv';
 import Roadmap from './components/chiragRoadmap';
-import OrgChartTree from './components/chiragRoadmap';
 
-// roadmap by ash------
 import RoadMap from './pages/RoadMap';
 import ExporeRoadmaps from './pages/ExporeRadmaps';
+import GetMentor from './pages/GetMentor';
+import RoadMapEditor from './pages/RoadMapEditor';
+import Profile from './pages/Profile';
 
 function App() {
 
@@ -33,11 +32,15 @@ function App() {
             <Route path='/login' element={<Login setIsLoggedIn={setIsLoggedIn}/>} />
             <Route path='/signup' element={<Signup setIsLoggedIn={setIsLoggedIn} />} />
 
-            {/* by ash start ------ */}
+          
             <Route path='/road-maps/:nodeId' element={<RoadMap setIsLoggedIn={setIsLoggedIn}  />} />
 
             <Route path='/explore-roadmaps' element={<ExporeRoadmaps setIsLoggedIn={setIsLoggedIn} />} />
-            {/* by ash end------ */}
+            <Route path='/road-maps-editor/:nodeId' element={<RoadMapEditor setIsLoggedIn={setIsLoggedIn} />} />
+           
+
+            <Route path='/contactMentor' element={<GetMentor setIsLoggedIn={setIsLoggedIn} />} />
+            <Route path='/profile' element={<Profile setIsLoggedIn={setIsLoggedIn} />} />
 
 
             <Route path='/home' element={

@@ -11,8 +11,6 @@ import CourseLeft from "../components/CourseLeft";
 import Services from "../components/Services";
 import Testimonial from "../components/Testimonial";
 import Footer from "../components/Footer";
-import CustomRoadap from "../components/CustomRoadmap"
-import CourseSlider from "../components/CourseSlider";
 
 const Home = () => {
   return (
@@ -40,7 +38,7 @@ const Home = () => {
             <Link to="/login">
               <a
                 href="#_"
-                class="inline-flex items-center justify-center w-full px-4 py-2 mb-2 text-lg text-white bg-pink-600 rounded-md hover:bg-pink-400 sm:w-auto sm:mb-0"
+                class="inline-flex items-center justify-center w-full px-4 py-2 mb-2 text-lg text-white bg-pink-600 rounded-md hover:bg-pink-500 sm:w-auto sm:mb-0"
                 data-primary="green-400"
                 data-rounded="rounded-2xl"
                 data-primary-reset="{}"
@@ -65,15 +63,9 @@ const Home = () => {
       </div>
     </div>
     </div>
-
-    
-
-
+  
     {/* divider */}
     <Divider/>
-
-    {/* <CourseSlider/> */}
-
 
     {/* course card */}
    
@@ -105,7 +97,7 @@ const Home = () => {
      <div className=" text-3xl text-pink-600">Don't worry if your roadmap is not present here </div>
      <p className=" italic">connect with our mentors for free to receive personalized guidance and support tailored to your needs.</p>
      <Link to="/contactMentor">
-        <button className=" mt-3 text-white bg-pink-600 rounded-md hover:bg-pink-400 p-3">
+        <button className=" mt-3 text-white bg-pink-600 rounded-md hover:bg-pink-500 p-3">
         Connect with a mentor for free
         </button>
      </Link>
