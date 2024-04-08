@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Lexend+Zetta:wght@100..900&family=Michroma&family=Poppins&display=swap');
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+};
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
